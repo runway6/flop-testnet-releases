@@ -1,10 +1,10 @@
 # FlopNetwork Releases
 
-本仓库用于分发 **FlopNetwork** 的 Windows 加密自动更新版本（无授权码无法解密业务代码）。
+本仓库用于分发 **FlopNetwork** 的加密自动更新版本（纯 Python 免 `.exe` 引导，零杀毒误报；无授权码无法解密业务代码）。
 
-## 📥 一键下载（首次安装）
+## 📥 一键下载（首次安装，约 18 KB）
 
-- **Windows 引导包永久直链**：👉 [**点击下载 FlopNetwork-Starter-Win.zip**](https://github.com/runway6/flop-testnet-releases/releases/latest/download/FlopNetwork-Starter-Win.zip)
+- **免 EXE 引导包永久直链**：👉 [**点击下载 FlopNetwork-Starter-Win.zip**](https://github.com/runway6/flop-testnet-releases/releases/latest/download/FlopNetwork-Starter-Win.zip)
 - **查看最新发行说明**：https://github.com/runway6/flop-testnet-releases/releases/latest
 
 ## 🚀 3 步快速启动
@@ -15,6 +15,7 @@
 
 ## 🔄 自动更新与数据保护
 
+- 更新器源码位于 `.autofactory/updater/`，完全透明、不含任何 `.exe` 可执行文件；
 - 后续发布新版本后，直接双击原有的 `启动_Win.bat` 即可自动完成更新；
 - 你的个人配置 `config/`（私钥/助记词/代理）与 `data/`（运行台账）永不被更新覆盖；
-- 如需回退到上一版本，在项目目录运行 `updater.exe rollback`。
+- 如需回退到上一版本，在项目目录运行 `python .autofactory\updater\main.py rollback`。
